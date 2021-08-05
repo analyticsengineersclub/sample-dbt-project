@@ -1,0 +1,14 @@
+coffee_shop:
+  outputs:
+    dev:
+      type: bigquery
+      threads: 8
+      method: oauth
+      project: graceful-creek-264520 # update this to be the name of your project
+      dataset: dbt_claire # update this to be your name
+      threads: 8
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      retries: 1
+  target: dev

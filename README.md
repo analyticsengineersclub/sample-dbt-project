@@ -1,15 +1,36 @@
-Welcome to your new dbt project!
+### coffee-shop-dbt
 
-### Using the starter project
+This is a sample project used for Analytics Engineers Club
 
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Running this project locally
+1. Clone this github repo
+2. Install dbt following [these instructions](https://docs.getdbt.com/dbt-cli/installation)
+3. Auth your gcloud account with `gcloud auth login`
+4. Copy the example profile to your `~/.dbt` folder (created when installing dbt):
+```bash
+$ cp ./sample.profiles.yml ~/.dbt/profiles.yml
+```
+5. Populate `~/.dbt/profiles.yml` with the credentials you obtained in step 3:
+```bash
+$ code ~/.dbt/profiles.yml
+```
+6. Verify that you can connect to your database
+```bash
+$ dbt debug
+```
+7. Verify that you can run dbt
+```bash
+$ dbt run
+```
+8. Verify that all the test pass
+```bash
+$ dbt test
+```
+9. Generate the docs for the project
+```bash
+$ dbt docs generate
+```
+10. Serve the docs for the project
+```bash
+$ dbt docs serve
+```
