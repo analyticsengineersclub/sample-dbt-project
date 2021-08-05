@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: customers
+    description: 'cleaned up table of customers'
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
