@@ -5,7 +5,7 @@ This is a sample project used for Analytics Engineers Club
 ## Running this project locally
 1. Clone this github repo
 2. Install dbt following [these instructions](https://docs.getdbt.com/dbt-cli/installation)
-3. Auth your gcloud account with `gcloud auth login`
+3. Auth your gcloud account with `gcloud auth application-default login`
 4. Copy the example profile to your `~/.dbt` folder (created when installing dbt):
 ```bash
 $ cp ./sample.profiles.yml ~/.dbt/profiles.yml
