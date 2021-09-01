@@ -4,7 +4,7 @@ with source as (
 
 renamed as (
     select
-        id as repository_id,
+        id as repo_id,
         owner_id as owner_user_id,
 
         archived as is_archived,

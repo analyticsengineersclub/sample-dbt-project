@@ -7,7 +7,7 @@ with source as (
 renamed as (
 
     select
-        id as issue_ud,
+        id as issue_id,
         _fivetran_synced,
         body,
         closed_at,
