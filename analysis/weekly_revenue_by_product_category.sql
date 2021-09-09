@@ -1,5 +1,5 @@
 select
-    date_trunc(first_order_at, month) as signup_month,
+    date_trunc(sold_at, week) as date_week,
     product_category,
     sum(amount) as revenue
 
