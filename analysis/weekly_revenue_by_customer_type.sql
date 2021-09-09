@@ -1,9 +1,9 @@
 select
     date_trunc(sold_at, week) as date_week,
-    product_category,
-    sum(amount) as revenue
+    is_first_order,
+    sum(total) as revenue
 
-from {{ ref('item_sales') }}
+from {{ ref('orders') }}
 
 group by 1, 2
 order by 1, 2

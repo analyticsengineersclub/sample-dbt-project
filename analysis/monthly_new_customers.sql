@@ -4,3 +4,4 @@ select
 
 from {{ ref('customers') }}
 group by 1
+order by 1

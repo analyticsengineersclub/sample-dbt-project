@@ -17,15 +17,19 @@ customer_orders as (
         min(created_at) as first_order_at
     from orders
     group by 1
+),
+
+joined as (
+    select
+        customers.customer_id,
+        customers.name,
+        customers.email,
+        customer_orders.first_order_at,
+        customer_orders.number_of_orders
+
+    from customers
+    left join customer_orders
+        using (customer_id)
 )
 
-select
-    customers.customer_id,
-    customers.name,
-    customers.email,
-    customer_orders.first_order_at,
-    customer_orders.number_of_orders
-
-from customers
-left join customer_orders
-    using (customer_id)
+select * from joined
