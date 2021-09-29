@@ -10,6 +10,9 @@ sources:
             tests:
               - unique
               - not_null
+          - name: email
+            tests:
+              - email_format
 
       - name: orders
         columns:
