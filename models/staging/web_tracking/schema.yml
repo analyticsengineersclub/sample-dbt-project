@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: visitors
+    description: one record per visitor id with their eventual customer_id
+    columns:
+      - name: visitor_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id

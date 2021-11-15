@@ -18,4 +18,3 @@ clean-targets:
 
 models:
   coffee_shop:
-    materialized: table
